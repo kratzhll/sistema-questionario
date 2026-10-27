@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->commit();
 
         // Redireciona para uma página de sucesso
-        header("Location: sucesso.php");
+        header("Location: ../views/sucesso.php");
         exit;
 
     } catch (Exception $e) {
