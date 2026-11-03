@@ -34,6 +34,7 @@
   --radius-2xl: calc(var(--radius) * 1.8);
 }
 
+<<<<<<< HEAD
 /* Tema Único: Halloween / Spooky Sweets */
 :root {
   color-scheme: dark;
@@ -59,6 +60,58 @@
   --ring: #f97316;
   --chart-1: #f97316;
   --radius: 0.75rem;
+=======
+/* Paleta A — "Azul Confiança" (padrão) */
+:root {
+  color-scheme: light;
+  --background: #f5f7fa;
+  --foreground: #14213d;
+  --card: #ffffff;
+  --card-foreground: #14213d;
+  --popover: #ffffff;
+  --popover-foreground: #14213d;
+  --primary: #1f4e8c;
+  --primary-foreground: #ffffff;
+  --secondary: #e8eef6;
+  --secondary-foreground: #14213d;
+  --muted: #e8eef6;
+  --muted-foreground: #4a5568;
+  --accent: #e8eef6;
+  --accent-foreground: #14213d;
+  --success: #1e6b4f;
+  --success-foreground: #ffffff;
+  --destructive: #b42318;
+  --border: #cbd5e1;
+  --input: #8a97a8;
+  --ring: #1f4e8c;
+  --chart-1: #1f4e8c;
+  --radius: 0.625rem;
+}
+
+/* Paleta B — "Verde Acolhedor" (versão alternativa para o teste A/B) */
+:root[data-palette='b'] {
+  --background: #f7f6f1;
+  --foreground: #1f2a24;
+  --card: #ffffff;
+  --card-foreground: #1f2a24;
+  --popover: #ffffff;
+  --popover-foreground: #1f2a24;
+  --primary: #2e6b4e;
+  --primary-foreground: #ffffff;
+  --secondary: #eceae0;
+  --secondary-foreground: #1f2a24;
+  --muted: #eceae0;
+  --muted-foreground: #4d5650;
+  --accent: #eceae0;
+  --accent-foreground: #1f2a24;
+  --success: #2e6b4e;
+  --success-foreground: #ffffff;
+  --destructive: #a1291b;
+  --border: #d6d3c4;
+  --input: #8f9488;
+  --ring: #2e6b4e;
+  --chart-1: #2e6b4e;
+>>>>>>> 882ee90464bf088eeaa87ca0bcce20f099714037
 }
 
 @layer base {
@@ -68,4 +121,8 @@
   body {
     @apply bg-background text-foreground;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 882ee90464bf088eeaa87ca0bcce20f099714037

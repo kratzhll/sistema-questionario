@@ -112,6 +112,7 @@ try {
                         <!-- Grelha de Alternativas / Escala -->
                         <div class="grid gap-2 <?php echo $escala ? 'grid-cols-1 sm:grid-cols-5' : 'grid-cols-1 sm:grid-cols-2'; ?>">
                             <?php foreach ($alternativas as $i => $alt): ?>
+<<<<<<< HEAD
     <label class="group relative flex cursor-pointer items-center gap-3 rounded-xl border-2 border-slate-200 bg-white p-3 transition-colors hover:border-blue-900/50 hover:bg-slate-50 has-checked:border-blue-900 has-checked:bg-blue-50/40 <?php echo $escala ? 'sm:flex-col sm:justify-start sm:px-2 sm:py-4 sm:text-center' : ''; ?>">
         <input 
             type="radio" 
@@ -139,6 +140,35 @@ try {
         </svg>
     </label>
 <?php endforeach; ?>
+=======
+                                <label class="group relative flex cursor-pointer items-center gap-3 rounded-xl border-2 border-slate-200 bg-white p-3 transition-colors hover:border-blue-900/50 hover:bg-slate-50 has-checked:border-blue-900 has-checked:bg-blue-50/40 <?php echo $escala ? 'sm:flex-col sm:justify-start sm:px-2 sm:py-4 sm:text-center' : ''; ?>">
+                                    <input 
+                                        type="radio" 
+                                        name="resposta_<?php echo $q['id']; ?>" 
+                                        value="<?php echo $alt['id']; ?>" 
+                                        <?php echo $q['obrigatorio'] ? 'required' : ''; ?> 
+                                        class="sr-only responder-input" 
+                                        data-questao="<?php echo $q['id']; ?>">
+                                    
+                                    <?php if ($escala): ?>
+                                        <span class="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-slate-300 text-sm font-bold text-slate-700 group-has-checked:border-blue-900 group-has-checked:bg-blue-900 group-has-checked:text-white transition-colors">
+                                            <?php echo ($alt['valor'] ?? $i + 1); ?>
+                                        </span>
+                                    <?php else: ?>
+                                        <span class="flex size-5 shrink-0 items-center justify-center rounded-full border-2 border-slate-300 group-has-checked:border-blue-900">
+                                            <span class="size-2.5 rounded-full bg-blue-900 opacity-0 group-has-checked:opacity-100 transition-opacity"></span>
+                                        </span>
+                                    <?php endif; ?>
+
+                                    <span class="text-base leading-snug text-slate-700"><?php echo htmlspecialchars($alt['texto']); ?></span>
+
+                                    <!-- Ícone de Check do v0 -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute top-2 right-2 hidden size-4 text-blue-900 group-has-checked:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </label>
+                            <?php endforeach; ?>
+>>>>>>> 882ee90464bf088eeaa87ca0bcce20f099714037
                         </div>
 
                     <?php elseif ($q['tipo_resposta'] === 'texto'): ?>
