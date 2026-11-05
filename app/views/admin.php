@@ -30,13 +30,6 @@ try {
         <h1 class="text-3xl font-bold">Painel de Administração</h1>
         <p class="text-sm text-gray-400">Faça a gestão dos questionários criados e relatórios de respostas.</p>
     </div>
-    
-    <a href="logout.php" class="inline-flex items-center gap-2 bg-[#2a0808] hover:bg-[#3d0c0c] border border-red-900/50 text-red-400 hover:text-red-300 text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-sm">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
-        </svg>
-        <span>Sair da Administração</span>
-    </a>
 </div>
 
     <?php if (isset($erro)): ?>

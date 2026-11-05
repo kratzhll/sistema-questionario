@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 session_start();
 
 // Se não estiver logado como administrador, redireciona para o login
@@ -10,8 +9,6 @@ if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
 ?>
 
 <?php
-=======
->>>>>>> 882ee90464bf088eeaa87ca0bcce20f099714037
 include '../../config/conexao.php';
 include 'partials/header.php';
 
@@ -69,17 +66,10 @@ try {
                 <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Relatório de Resultados</span>
                 <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1"><?php echo htmlspecialchars($questionario['titulo']); ?></h1>
             </div>
-<<<<<<< HEAD
             <!-- Caixa de respostas com número e texto em laranja -->
             <div class="flex items-center gap-2 rounded-xl px-4 py-3 border shadow-sm" style="background-color: #171717; border-color: #262626; color: #ffffff;">
                 <span class="text-2xl font-bold" style="color: #f97316;"><?php echo $totalParticipacoes; ?></span>
                 <span class="text-xs font-semibold uppercase" style="color: #f97316;">Resposta(s) Enviadas</span>
-=======
-            <!-- Caixa de respostas dinâmica baseada na paleta -->
-            <div class="flex items-center gap-2 rounded-xl px-4 py-3 border shadow-sm" style="background-color: color-mix(in srgb, var(--primary) 8%, white); border-color: color-mix(in srgb, var(--primary) 20%, white); color: var(--primary);">
-                <span class="text-2xl font-bold"><?php echo $totalParticipacoes; ?></span>
-                <span class="text-xs font-semibold uppercase">Respostas Submetidas</span>
->>>>>>> 882ee90464bf088eeaa87ca0bcce20f099714037
             </div>
         </div>
     </header>

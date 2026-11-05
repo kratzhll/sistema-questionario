@@ -186,7 +186,7 @@ $pagina_atual = basename($_SERVER['PHP_SELF']);
             <!-- Navegação com destaque dinâmico -->
             <div class="flex flex-wrap items-center gap-2 sm:gap-4">
                 <nav aria-label="Principal">
-                    <ul class="flex items-center gap-1">
+                    <ul class="flex items-center gap-1 sm:gap-2">
                         <li>
                             <a href="index.php" class="rounded-lg px-3.5 py-2 text-sm font-bold transition-colors <?php echo ($pagina_atual === 'index.php' || $pagina_atual === 'responder.php') ? 'bg-neutral-800 text-orange-400 shadow-sm' : 'text-neutral-400 hover:bg-neutral-800/60 hover:text-white'; ?>">
                                 Questionários
@@ -197,6 +197,19 @@ $pagina_atual = basename($_SERVER['PHP_SELF']);
                                 Administração
                             </a>
                         </li>
+
+                        <!-- Botão de Sair visível apenas se estiver logado na administração -->
+                        <?php if (isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true): ?>
+                            <li class="ml-4">
+                                <a href="logout.php" class="inline-flex items-center gap-2 bg-[#2a0808] hover:bg-[#3d0c0c] border border-red-900/50 text-red-400 hover:text-red-300 text-xs font-semibold px-3 py-2 rounded-xl transition-colors shadow-sm ml-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                                    </svg>
+                                    <span class="hidden sm:inline">Sair da Administração</span>
+                                    <span class="sm:hidden">Sair</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
             </div>
