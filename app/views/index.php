@@ -15,7 +15,15 @@ try {
         <span class="text-xs font-bold uppercase tracking-wider" style="color: var(--primary);">Pesquisas de satisfação</span>
         <h1 class="text-3xl font-bold text-slate-900">Sua opinião ajuda a melhorar o que fazemos</h1>
         <p class="text-slate-600">
+<<<<<<< HEAD
             Escolha um questionário abaixo e responda no seu ritmo. As respostas são anônimas.
+=======
+<<<<<<< HEAD
+            Escolha um questionário abaixo e responda no seu ritmo. As respostas são anônimas.
+=======
+            Escolha um questionário abaixo e responda no seu ritmo. As respostas são anônimas e funcionam em qualquer dispositivo.
+>>>>>>> 882ee90464bf088eeaa87ca0bcce20f099714037
+>>>>>>> 3a91264e0b8e720114d3ae744669a54675d05f37
         </p>
     </div>
 
