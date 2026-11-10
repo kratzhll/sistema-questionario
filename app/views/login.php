@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $senha_digitada = $_POST['senha'] ?? '';
     
     // Defina aqui a senha da administração do projeto
-    $senha_mestra = 'admin123'; 
+    $senha_mestra = 'Qwerty!88'; 
 
     if ($senha_digitada === $senha_mestra) {
         $_SESSION['admin_logado'] = true;

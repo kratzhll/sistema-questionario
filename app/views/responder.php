@@ -102,15 +102,24 @@ try {
                     </div>
 
                     <?php
-                    $stmtAlt = $pdo->prepare("SELECT * FROM alternativas WHERE questao_id = ? ORDER BY ordem ASC");
-                    $stmtAlt->execute([$q['id']]);
-                    $alternativas = $stmtAlt->fetchAll(PDO::FETCH_ASSOC);
                     $escala = ($q['tipo_resposta'] === 'escala');
+                    $alternativas = [];
+
+                    if ($escala) {
+                        // Gera automaticamente a escala de 1 a 10 para perguntas do tipo escala
+                        for ($i = 1; $i <= 10; $i++) {
+                            $alternativas[] = ['id' => $i, 'texto' => $i, 'valor' => $i];
+                        }
+                    } elseif ($q['tipo_resposta'] === 'multipla_escolha') {
+                        $stmtAlt = $pdo->prepare("SELECT * FROM alternativas WHERE questao_id = ? ORDER BY ordem ASC");
+                        $stmtAlt->execute([$q['id']]);
+                        $alternativas = $stmtAlt->fetchAll(PDO::FETCH_ASSOC);
+                    }
                     ?>
 
                     <?php if ($escala || $q['tipo_resposta'] === 'multipla_escolha'): ?>
                         <!-- Grelha de Alternativas / Escala -->
-                        <div class="grid gap-2 <?php echo $escala ? 'grid-cols-1 sm:grid-cols-5' : 'grid-cols-1 sm:grid-cols-2'; ?>">
+                        <div class="grid gap-2 <?php echo $escala ? 'grid-cols-5 sm:grid-cols-10' : 'grid-cols-1 sm:grid-cols-2'; ?>">
                             <?php foreach ($alternativas as $i => $alt): ?>
     <label class="group relative flex cursor-pointer items-center gap-3 rounded-xl border-2 border-slate-200 bg-white p-3 transition-colors hover:border-blue-900/50 hover:bg-slate-50 has-checked:border-blue-900 has-checked:bg-blue-50/40 <?php echo $escala ? 'sm:flex-col sm:justify-start sm:px-2 sm:py-4 sm:text-center' : ''; ?>">
         <input 
