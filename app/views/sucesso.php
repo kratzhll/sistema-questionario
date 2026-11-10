@@ -1,5 +1,7 @@
 <?php include 'partials/header.php'; ?>
 
+<body style="background-image: url('/sistema-questionario/public/img/halloween-bg.png') !important; background-size: cover !important; background-position: center !important; background-attachment: fixed !important; background-color: #0d0d0d !important;">
+
 <main class="mx-auto flex w-full max-w-md flex-col items-center text-center gap-6 px-4 py-20">
     <div class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
     <!-- Ícone temático de Halloween (Abóbora / Sucesso) -->

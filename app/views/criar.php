@@ -71,6 +71,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'partials/header.php';
 ?>
 
+<body style="background-image: url('/sistema-questionario/public/img/halloween-bg.png') !important; background-size: cover !important; background-position: center !important; background-attachment: fixed !important; background-color: #0d0d0d !important;">
+
 <main class="mx-auto flex w-full max-w-2xl flex-col gap-6 px-4 py-8 text-left items-start">
     <h1 class="text-2xl font-bold text-white tracking-wide">Criar Novo Questionário</h1>
 

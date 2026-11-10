@@ -17,6 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
+<body style="background-image: url('/sistema-questionario/public/img/halloween-bg.png') !important; background-size: cover !important; background-position: center !important; background-attachment: fixed !important; background-color: #0d0d0d !important;">
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

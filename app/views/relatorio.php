@@ -50,6 +50,8 @@ try {
 }
 ?>
 
+<body style="background-image: url('/sistema-questionario/public/img/halloween-bg.png') !important; background-size: cover !important; background-position: center !important; background-attachment: fixed !important; background-color: #0d0d0d !important;">
+
 <main class="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-8 sm:py-12">
     <!-- Link de retorno -->
     <a href="admin.php" style="color: var(--primary);" class="flex items-center gap-1.5 self-start text-sm font-bold underline-offset-4 hover:underline">

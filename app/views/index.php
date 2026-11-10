@@ -13,6 +13,8 @@ try {
 }
 ?>
 
+<body style="background-image: url('/sistema-questionario/public/img/halloween-bg.png') !important; background-size: cover !important; background-position: center !important; background-attachment: fixed !important; background-color: #0d0d0d !important;">
+
 <main class="mx-auto flex w-full max-w-4xl flex-col gap-6 px-4 py-8 sm:py-12 text-left items-start">
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
         <div class="flex flex-col gap-2 w-full items-start">
